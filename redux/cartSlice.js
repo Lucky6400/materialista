@@ -27,8 +27,12 @@ export const cartSlice = createSlice({
         decrement(state, action) {
             const currentIndex = state.items.findIndex(item => item.id === action.payload.id);
             if (currentIndex !== -1) {
-                state.items[currentIndex].quantity--;
-                state.items[currentIndex].total = state.items[currentIndex].price * state.items[currentIndex].quantity;
+                if (state.items[currentIndex].quantity === 1) {
+                    state.items.splice(currentIndex, 1);
+                } else {
+                    state.items[currentIndex].quantity--;
+                    state.items[currentIndex].total = state.items[currentIndex].price * state.items[currentIndex].quantity;
+                }
             }
         }
     }
