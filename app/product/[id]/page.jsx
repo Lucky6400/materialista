@@ -1,3 +1,4 @@
+import Container from '@/components/common/Container';
 import AddToCart from '@/components/single-prod/AddToCart';
 import RatingSystem from '@/components/single-prod/RatingSystem';
 import Reviews from '@/components/single-prod/Reviews';
@@ -10,7 +11,7 @@ const SingleProduct = async ({ params }) => {
     const product = await getSingleProduct(params.id);
     //console.log(product)
     return (
-        <div className="w-full px-2 max-w-7xl mx-auto py-10">
+        <Container className="w-full px-2 max-w-7xl mx-auto py-10">
             <Image
                 src={product.image}
                 width={400}
@@ -35,7 +36,7 @@ const SingleProduct = async ({ params }) => {
             </p>
             <AddToCart item={product}/>
             <Reviews/>
-        </div>
+        </Container>
     )
 }
 

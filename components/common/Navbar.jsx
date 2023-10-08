@@ -47,9 +47,9 @@ export function NavbarDefault() {
         color="blue-gray"
         className="p-1 font-normal"
       >
-        <a href="#" className="flex items-center">
+        <Link href="/account" className="flex items-center">
           Account
-        </a>
+        </Link>
       </Typography>
       <Typography
         as="li"

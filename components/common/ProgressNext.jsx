@@ -6,7 +6,7 @@ export default function ProgressNext() {
     return (
         <ProgressBar
             height="4px"
-            color="#000b2d"
+            color="#1c54fa"
             options={{ showSpinner: false }
             }
             shallowRouting

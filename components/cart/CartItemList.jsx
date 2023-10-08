@@ -12,7 +12,9 @@ const CartItemList = () => {
             {items && items.length > 0 ?
                 items.map(item => (<CartItem key={item.id} item={item} />))
 
-                : <></>}
+                : <div className="w-full text-center font-semibold py-10 lg:text-3xl sm:text-2xl text-xl">
+                    No items found! <br /> Go to a product and add it to your cart.
+                </div>}
 
         </div>
     )

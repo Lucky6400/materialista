@@ -21,7 +21,7 @@ const Quantity = ({ qty, id }) => {
                 variant="gradient" className="rounded-full text-3xl">
                 -
             </IconButton>
-            <input type="text" className="w-10 border text-center p-2 border-gray-600 rounded-md" value={value}
+            <input disabled type="text" className="w-10 border text-center p-2 border-gray-600 rounded-md" value={value}
                 onChange={e => setValue(e.target.value)}
             />
             <IconButton
